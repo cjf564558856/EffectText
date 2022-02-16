@@ -1,0 +1,82 @@
+CREATE TABLE if not exists "user" (
+  "Id" INTEGER NOT NULL,
+  "user_id" TEXT NOT NULL,
+  "accountType" INTEGER,
+  "accountId" TEXT,
+  "nickName" TEXT,
+  "aliasName" TEXT,
+  "englishName" TEXT,
+  "number" text,
+  "phone" TEXT,
+  "email" TEXT,
+  "sex" BOOL,
+  "birthday" DATE,
+  "joinTime" DATE,
+  "outStanding" BOOL,
+  "headImgMd5" TEXT,
+  PRIMARY KEY ("Id"),
+  CONSTRAINT "user_id" UNIQUE ("user_id" ASC) ON CONFLICT REPLACE
+);
+
+
+CREATE TABLE if not exists "user" (
+  "Id" INTEGER NOT NULL,
+  "user_id" TEXT NOT NULL,
+  "accountType" INTEGER,
+  "accountId" TEXT,
+  "nickName" TEXT,
+  "aliasName" TEXT,
+  "englishName" TEXT,
+  "number" text,
+  "phone" TEXT,
+  "email" TEXT,
+  "sex" BOOL,
+  "birthday" DATE,
+  "joinTime" DATE,
+  "outStanding" BOOL,
+  "headImgMd5" TEXT,
+  PRIMARY KEY ("Id"),
+  CONSTRAINT "user_id" UNIQUE ("user_id" ASC) ON CONFLICT REPLACE
+);
+
+
+CREATE TABLE if not exists "org" (
+  "Id" INTEGER NOT NULL,
+  "org_id" text NOT NULL,
+  "oeg_name" TEXT,
+  "parentId" text,
+  "userCount" integer,
+  "nameList" TEXT,
+  PRIMARY KEY ("Id"),
+  CONSTRAINT "org_id" UNIQUE ("org_id") ON CONFLICT REPLACE
+);
+
+CREATE TABLE if not exists "org_language" (
+  "Id" INTEGER NOT NULL,
+  "org_id" text,
+  "language_id" text,
+  PRIMARY KEY ("Id"),
+  CONSTRAINT "org_id" UNIQUE ("org_id") ON CONFLICT REPLACE,
+  CONSTRAINT "language_id" UNIQUE ("language_id") ON CONFLICT REPLACE
+);
+
+
+CREATE TABLE if not exists "user" (
+  "Id" INTEGER NOT NULL,
+  "user_id" TEXT NOT NULL,
+  "accountType" INTEGER,
+  "accountId" TEXT,
+  "nickName" TEXT,
+  "aliasName" TEXT,
+  "englishName" TEXT,
+  "number" text,
+  "phone" TEXT,
+  "email" TEXT,
+  "sex" BOOL,
+  "birthday" DATE,
+  "joinTime" DATE,
+  "outStanding" BOOL,
+  "headImgMd5" TEXT,
+  PRIMARY KEY ("Id"),
+  CONSTRAINT "user_id" UNIQUE ("user_id" ASC) ON CONFLICT REPLACE
+);
